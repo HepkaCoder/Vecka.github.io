@@ -1,5 +1,6 @@
 const WeekText = document.getElementsByClassName("Vecka")[0];
 const DateText = document.getElementsByClassName("Datum")[0];
+const TimeText = document.getElementsByClassName("Time")[0];
 
 function getWeekNumber(date) {
     const oneJan = new Date(date.getFullYear(), 0, 1);
@@ -7,7 +8,29 @@ function getWeekNumber(date) {
     return Math.ceil((days + oneJan.getDay() + 1) / 7);
 }
 
-const currentWeek = getWeekNumber(new Date());
-WeekText.textContent = currentWeek;
+function StartTime() {
+    const now = new Date();
+    let h = now.getHours();
+    let m = now.getMinutes();
+    let s = now.getSeconds();
 
-DateText.textContent = new Date.getDate()
+    m = checkTime(m);
+    s = checkTime(s);
+
+    TimeText.textContent = h + ":" + m + ":" + s;
+
+    setTimeout(StartTime, 1000);
+}
+
+function checkTime(i) {
+    if (i < 10) { i = "0" + i; }
+    return i;
+}
+
+
+const today = new Date();
+const currentWeek = getWeekNumber(today);
+
+WeekText.textContent = currentWeek;
+DateText.textContent = today.toISOString().split('T')[0];
+StartTime();
