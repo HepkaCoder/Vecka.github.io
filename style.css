@@ -1,0 +1,36 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: black;
+    color: white;
+}
+
+.Info {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    align-content: center;
+    align-items: center;
+}
+
+.Vecka{
+    font-size: 15vw;
+    text-align: center;
+}
+
+.Datum {
+    font-size: 2vw;
+    text-align: center;
+}
+
+.Info p {
+    color: rgba(255, 255, 255, 0.16);
+
+    text-align: center;
+    font-size: 1vw;
+}
