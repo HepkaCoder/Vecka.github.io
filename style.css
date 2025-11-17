@@ -28,9 +28,15 @@ body {
     text-align: center;
 }
 
+.Time {
+     font-size: 1vw;
+     text-align: center;
+     padding-top: 10px;
+}
+
 .Info p {
     color: rgba(255, 255, 255, 0.16);
-
+    margin-top: 10px;
     text-align: center;
     font-size: 1vw;
 }
